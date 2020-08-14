@@ -7,17 +7,21 @@ for i in range(0,26):
     alpha=chr(ord(alpha)+1)
 a=a.lower()
 for i in a:
-    b[i]=b[i]+1
-def function(b):
+    if(i!=' '):
+        b[str(i)]=b[str(i)]+1
+    else:
+        continue
+def func(b):
     for i in range(ord('a'),ord('z')+1):
-        if(b[chr(i)]>=1):
-            return True
-        else:
-            print("This is not pangram")
+        if(b[chr(i)]<1):
+            return "This is not pangram"
             break
-function(b)
-if(function==True):
+        else:
+            continue
+if(func(b)==None):
     print("This is pangram")
+else:
+    print(func(b))
 
         
   
